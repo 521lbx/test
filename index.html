@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>firstapp</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="static/Untitled.ico">
+  	<script>
+  		var deviceWidth = document.documentElement.clientWidth || window.innerWidth;
+	  	document.getElementsByTagName('html')[0].style.fontSize=deviceWidth/7.5+"px";
+			console.log(deviceWidth/7.5)
+			window.onresize = function(){
+				document.getElementsByTagName('html')[0].style.fontSize=deviceWidth/7.5+"px";
+			};
+
+			//1rem=2px
+	  </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

@@ -1,0 +1,287 @@
+@themcolor:#ffe600;//主题色
+@colorf:#fff;//
+@color2b:#2b2b2b;//
+@lineCorlor:#e8e8e8;
+@staticImgSrc:'http://180.76.168.76/Rwms/goodshop/images/';
+//.mu-inverse{
+//  color:@color2b!important;
+//}
+//重定义ui
+.mu-paper{
+    background-color: inherit;
+}
+.mu-infinite-scroll{
+    margin-bottom: 56px;
+}
+.mu-refresh-control-refreshing{
+    margin-top: 70px;
+}
+.mu-circle-spinner{//加载圈颜色
+    border-color: #ffe600!important;
+}
+.mu-refresh-control{//加载箭头圈颜色
+    color: #ffe600!important;
+}
+.fontSize(@size){
+    font-size:@size;
+}
+.font22{
+    .fontSize(0.22rem);
+}
+.font24{
+    .fontSize(0.24rem);
+}
+.font28{
+    .fontSize(0.28rem);
+}
+.font30{
+    .fontSize(0.3rem);
+}
+.font32{
+    .fontSize(0.32rem);
+}
+.font36{
+    .fontSize(0.36rem);
+}
+.font40{
+    .fontSize(0.4rem);
+}
+.fontbold{
+    font-weight:bold;
+}
+
+.fontColor(@color){
+    color:@color;
+}
+.color9{
+    .fontColor(#999)
+}
+.colorRed{
+    .fontColor(red)
+}
+.color2b{
+    .fontColor(#2b2b2b)
+}
+
+.borderB(@borderText){
+    border-bottom:1px solid @borderText;
+}
+.bordere8{
+    .borderB(#e8e8e8)
+}
+.bordertop{
+    border-top:1px solid #e8e8e8;
+}
+
+.bgc{
+    background-color:@themcolor;
+}
+.bgcfff{
+    background-color:@colorf;
+}
+.padd30{
+    padding:0.30rem;
+}
+.padd30l{
+    padding-left:0.3rem;
+}
+.padd30r{
+    padding-right:0.3rem;
+}
+.container{
+    padding: 0;
+}
+.tabBottom{
+    width:100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background-color:#fff;
+}
+
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.borderRad6{
+    border-radius: 0.1rem;
+}
+.flexCenter{
+    display: flex;
+    align-items:center ;//flex内子项目的对齐方式
+}
+.textCenter{
+    text-align: center;
+}
+
+//图标
+.icon(@width,@height,@imgname,@sizex,@sizey,@positionx,@positiony){
+    width:@width ;
+    height:@height;
+    background-image: url("@{staticImgSrc}@{imgname}");
+    background-repeat:no-repeat;
+    background-size:@sizex @sizey;
+    background-position:@positionx @positiony;
+}
+//定位图标
+.iconPosition{
+    .icon(0.26rem,0.3rem,"icon.png",auto,0.9rem,-3.6rem,-0.6rem)
+}
+//向右箭头图标
+.iconArrow{
+    .icon(0.13rem,0.20rem,"new_index3.png",auto,0.20rem,0rem,0rem)
+}
+
+//首页样式
+//天气
+.weather{
+    width:0.5rem;
+    height:0.5rem;
+}
+.weathertxt{
+    .fontSize(10px);
+    margin-right:0.1rem;
+}
+.indexShop{
+    height:1.5rem;
+    position:relative;
+    top:-0.8rem;
+}
+.shopCard{
+    width:2.60rem;
+    height:3.90rem;
+}
+.shoplist {
+    width:100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    .item{
+        width:2.6rem;
+        height:3.95rem;
+        margin-right:0.3rem;
+        display: inline-block;
+    }
+    :last-child{
+        margin-right:0;
+    }
+}
+.bigTitle{
+    .fontbold;
+    .font40;
+    .padd30l;
+    margin-top:0.50rem;
+}
+.imgcell{
+    height:2.1rem;
+    width:2.1rem;
+    .bgc;
+}
+.topBar{
+    width: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+}
+.topBarTex{
+    text-align: center;
+    font-weight:bold;
+}
+.topBarMargin{
+    margin-top:56px;
+}
+//订单页样式
+.O_list{
+    margin-bottom:0.30rem;
+}
+.O_dilivertyTag{//代取快递图标
+    margin-top:0.24rem;
+    width:1.1rem;
+    height:0.52rem;
+    line-height: 0.52rem;
+    background:#2b2b2b;
+    color:@themcolor;
+    font-size: 0.22rem;
+    text-align: center;
+    border-top-right-radius: 0.26rem;
+    border-bottom-right-radius: 0.26rem;
+}
+.O_statusTex{
+    font-size: 0.3rem;
+    height:1rem;
+    line-height:1rem;
+    margin-right:0.3rem;
+}
+.O_dashline{
+    background-size:9px 1.5px;
+    width:100%;
+    height:1.5px;
+    background:url('http://180.76.168.76/Rwms/goodshop/images/dbgreyline.png') repeat-x;
+}
+.O_cancleBt{
+    height:0.9rem;
+    line-height: 0.9rem;
+}
+.O_shop{
+    display: flex;justify-content:space-between;height:1.2rem;
+}
+
+.O_shopimg{
+    width:1.2rem;height:1.2rem;margin-right:0.2rem
+}
+.O_icon{
+    width:0.6rem;height:0.6rem;margin-right:0.3rem
+}
+.O_statusList{
+    display:flex;justify-content:space-between;align-items:center;height: 0.5rem;font-size:0.28rem;color:#999;;
+}
+.O_total{
+    display:flex;justify-content:space-between;align-items:center;height: 0.88rem;
+}
+//我的页
+.M_topbg{
+    height:2.02rem;
+}
+.M_userinfo{
+    height:2.6rem;
+    display: flex;
+    justify-content:space-around; 
+}
+.M_flex1{
+    display: flex;justify-content:center; align-items:center ;flex-direction:column;
+    width:1.8rem;
+}
+.M_flex2{
+    width:1.8rem;
+}
+.M_title{
+    height:0.5rem;
+    line-height: 0.5rem;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+.M_content{
+    border:1px solid #e8e8e8;
+    height:1.49rem;
+    border-top:none;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center; 
+    align-items:center ;
+    
+}
+.M_contentCenter{
+    height:1.02rem;
+    display: flex;
+    align-items:center ;
+}
+.M_oplist{
+    height:0.9rem;
+    margin-top:0.2rem;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
